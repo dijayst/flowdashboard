@@ -101,11 +101,8 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
             >
              <IoClose size={40}/>
             </button>
-
-
-             <aside className="w-64 h-screen bg-white shadow px-10 flex flex-col gap-10">
-      
-      <div className="flex items-center space-x-2 text-[#163546] pt-10">
+<div className='px-10'>
+      <div className="flex items-center space-x-2 text-[#163546] py-10">
             <Link href="/" className="flex items-center space-x-2">
               <Image
                 src="/image/Group.png"
@@ -134,7 +131,7 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
           </Link>
         )})}
       </nav>
-    </aside>
+    </div>
           </div>
         </div>
       )}

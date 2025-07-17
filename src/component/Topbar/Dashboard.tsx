@@ -1,7 +1,7 @@
 import React from 'react'
 import Topbar from './Topbar'
 
-export default function Dasgb() {
+export default function Dashboard() {
   return (
     <div>
       <Topbar/>

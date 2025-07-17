@@ -15,10 +15,10 @@ export default function QuickTransfer() {
   return (
    <div className="bg-white p-4 rounded shadow h-[235]">
 <div className='flex justify-between'>
-      <div className="flex items-center space-x-4 overflow-x-auto pb-4">
+      <div className="flex items-center space-x-4 overflow-x-auto pb-4 gap-10">
         {users.map((user, i) => (
           
-          <div key={i} className="flex-shrink-0 text-center">
+          <div key={i} className="flex-shrink-0 text-center ">
             <Image
               src={user.image}
               alt={user.name}

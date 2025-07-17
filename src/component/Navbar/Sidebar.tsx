@@ -30,7 +30,7 @@ const Sidebar = () => {
               </p>
             </Link>
           </div>
-      <nav className="flex flex-col gap-8">
+      <nav className="flex flex-col gap-8 ">
         {navItems.map((item, i) => {
         const isActive = pathname === item.href;
           return (

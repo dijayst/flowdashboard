@@ -11,8 +11,7 @@ export default function WeeklyActivityChart() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-     const url = process.env.NEXT_PUBLIC_BASE;
-    fetch(`${url}/weekly_activity`)
+    fetch("https://6877b1cadba809d901f08847.mockapi.io/weekly_activity")
       .then(res => res.json())
       .then(setData)
       .catch(err => console.error("Failed to fetch data:", err));
