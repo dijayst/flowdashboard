@@ -15,29 +15,51 @@ export default function Home() {
       <Dasgb />
     
       <div className="flex flex-col gap-10 px-4 md:px-6 py-10">
-  {/* Top Section: Cards and Transactions */}
-  <div className="flex flex-col lg:flex-row gap-5">
-    <div className="flex flex-col gap-5 w-full lg:w-1/3">
+  
+
+<div className="flex flex-col gap-5 lg:flex-row">
+  {/* Cards Section with Horizontal Scroll on Mobile */}
+  <div className="flex flex-col gap-3 w-full lg:w-2/3">
+    {/* My Cards & See All Titles in a row */}
+    <div className="flex justify-between items-center px-1">
       <h1 className={`text-lg ${headerClassName}`}>My Cards</h1>
-      <div className="w-full rounded-lg bg-gradient-to-r from-[#343C6A] to-[#343C6A]/90 text-white">
-        <CardSummary />
-      </div>
-    </div>
-
-    <div className="flex flex-col gap-5 w-full lg:w-1/3">
       <h1 className="text-lg">See All</h1>
-      <div className="w-full rounded-lg bg-[#DFEAF2]">
-        <CardSummary />
-      </div>
     </div>
 
-    <div className="flex flex-col gap-5 w-full lg:w-1/3">
-      <h1 className={`text-lg ${headerClassName}`}>Recent Transaction</h1>
-      <div className="bg-white rounded-lg">
-        <RecentTransactions />
+    {/* Scrollable Card Container */}
+    <div className="flex gap-4 overflow-x-auto no-scrollbar">
+      {/* Card 1 */}
+      <div className="min-w-[250px] md:w-full rounded-lg bg-gradient-to-r from-[#343C6A] to-[#343C6A]/90 text-white">
+        <CardSummary />
       </div>
+      {/* Card 2 */}
+      <div className="min-w-[250px] md:w-full rounded-lg bg-[#DFEAF2]">
+        <CardSummary />
+      </div>
+      {/* Add more cards as needed */}
     </div>
   </div>
+
+  {/* Recent Transactions Section */}
+  <div className="flex flex-col gap-5 w-full lg:w-1/3">
+    <h1 className={`text-lg ${headerClassName}`}>Recent Transaction</h1>
+    <div className="bg-white rounded-lg">
+      <RecentTransactions />
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
   {/* Middle Section: Weekly Activity and Expense */}
   <div className="flex flex-col lg:flex-row gap-5">
