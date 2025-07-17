@@ -66,3 +66,6 @@ export const useTransactionStore = create<TransactionStore>((set) => ({
 
 
 export const headerClassName = " font-semibold text-[#343C6A]";
+
+
+

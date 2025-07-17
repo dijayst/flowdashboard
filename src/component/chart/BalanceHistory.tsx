@@ -14,7 +14,8 @@ export default function BalanceHistoryChart() {
   useEffect(() => {
     // Mock API call
     const fetchData = async () => {
-      const response = await fetch('https://6877c66edba809d901f0de01.mockapi.io/history');
+      const url = process.env.NEXT_PUBLIC_BASE_URL;
+      const response = await fetch(`${url}/history`);
       const result = await response.json();
       setData(result);
     };

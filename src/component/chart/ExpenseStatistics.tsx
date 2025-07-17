@@ -9,7 +9,8 @@ const ExpenseStatistics = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://6877b1cadba809d901f08847.mockapi.io/statistic")
+     const url = process.env.NEXT_PUBLIC_BASE_URL;
+    fetch(`${url}/statistic`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

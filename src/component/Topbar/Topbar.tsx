@@ -1,9 +1,13 @@
-import React, { useMemo } from 'react'
+"use client";
+import React, { useMemo, useState } from 'react'
 import Image from "next/image";
 import { Bell, Menu, Settings } from 'lucide-react';
 import { FiSearch } from 'react-icons/fi';
-import { headerClassName } from '../chart/data';
+import { headerClassName} from '../chart/data';
 import { usePathname } from 'next/navigation';
+import { IoClose } from 'react-icons/io5';
+import Link from 'next/link';
+import { navItems } from '../Navbar/Sidedate';
 
 
 export default function Topbar() {
@@ -16,18 +20,22 @@ export default function Topbar() {
   }, [pathname]);
 
 
+const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const toggleSidebar = () => {
+    setSidebarOpen((prev) => !prev);
+  };
   
 
   return (
  
-
+<>
 
 <div className="w-full flex flex-col sm:flex-row items-center sm:items-center justify-between bg-white px-6 py-4 shadow-sm relative gap-4 sm:gap-0">
   {/* Title and Avatar container for mobile */}
   <div className="flex items-center justify-between w-full md:hidden mb-4">
         {/* Hamburger Menu */}
-        <button className="block md:hidden">
+        <button className="block md:hidden" onClick={toggleSidebar}>
           <Menu className="w-6 h-6 text-[#343C6A]" />
         </button>
  
@@ -83,7 +91,54 @@ export default function Topbar() {
   </div>
 </div>
 
+ {sidebarOpen && (
+        <div className="fixed inset-0 z-40  bg-opacity-50 md:hidden">
+          <div className="w-64 bg-white h-full shadow-lg p-4">
+            {/* Your sidebar content goes here */}
+            <button
+              className="text-sm "
+              onClick={toggleSidebar}
+            >
+             <IoClose size={40}/>
+            </button>
 
+
+             <aside className="w-64 h-screen bg-white shadow px-10 flex flex-col gap-10">
+      
+      <div className="flex items-center space-x-2 text-[#163546] pt-10">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/image/Group.png"
+                alt="Logo"
+              
+                width={18}
+                height={100}
+              />
+              <p className="font-bold font-inter text-2xl text-[#343C6A]">
+                Flow
+              </p>
+            </Link>
+          </div>
+      <nav className="flex flex-col gap-8">
+        {navItems.map((item, i) => {
+        const isActive = pathname === item.href;
+          return (
+
+          <Link key={i} href={item.href} 
+       
+          className={`flex items-center gap-5 ${
+                isActive ? 'text-[#232323] font-semibold' : 'text-[#B1B1B1] hover:text-[#232323]'
+              }`}
+          >
+            {item.icon} {item.label}
+          </Link>
+        )})}
+      </nav>
+    </aside>
+          </div>
+        </div>
+      )}
+      </>
 
 )
 }
