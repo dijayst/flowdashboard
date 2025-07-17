@@ -7,8 +7,8 @@ import { FiSearch } from 'react-icons/fi';
 import { usePathname } from 'next/navigation';
 import { IoClose } from 'react-icons/io5';
 import Link from 'next/link';
-import { navItems } from '../Navbar/Sidedata';
 import { headerClassName } from '../lib/data';
+import { navItems } from '../Navbar/Sidedata';
 
 
 export default function Topbar() {

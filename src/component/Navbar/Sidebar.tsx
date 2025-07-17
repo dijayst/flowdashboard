@@ -7,6 +7,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { navItems } from "./Sidedata";
 
+
 const Sidebar = () => {
   const pathname = usePathname();
 
