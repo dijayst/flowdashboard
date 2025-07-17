@@ -7,7 +7,6 @@ import ExpenseStatistics from "@/component/chart/ExpenseStatistics";
 import QuickTransfer from "@/component/chart/Quicktranfer";
 import RecentTransactions from "@/component/chart/RecentTransactions";
 import WeeklyActivityChart from "@/component/chart/WeeklyActivityChart";
-import Dasgb from "@/component/Topbar/Dashboard";
 import Topbar from "@/component/Topbar/Topbar";
 
 export default function Home() {

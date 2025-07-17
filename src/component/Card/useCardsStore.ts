@@ -7,7 +7,7 @@ export interface Card {
   name: string;
   valid: string;
   number: string;
-  //bg: string;
+ 
   
 }
 
@@ -24,7 +24,6 @@ export const useCardStore = create<CardState>()((set) => ({
       name: "Eddy Cusuma",
       valid: "12/22",
       number: "3778 **** **** 1234",
-      //bg: "bg-gradient-to-r from-[#343C6A] to-[#343C6A]/90 text-white",
      
     },
     
