@@ -27,12 +27,12 @@ const RecentTransactions: FC = () => {
                 )}
               </div>
               <div>
-                <p className="text-sm font-medium text-[#343C6A]">{tx.title}</p>
-                <p className="text-xs text-[#B1B1B1]">{tx.date}</p>
+                <p className="text-sm font-medium text-[#232323]">{tx.title}</p>
+                <p className="text-xs text-[#718EBF]">{tx.date}</p>
               </div>
             </div>
             <p
-              className={`text-sm font-semibold ${
+              className={`text-sm font-medium ${
                 tx.type === "credit" ? "text-[#41D4A8]" : "text-[#FF4B4A]"
               }`}
             >

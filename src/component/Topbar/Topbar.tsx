@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Image from "next/image";
 import { Bell, Settings } from 'lucide-react';
 import { FiSearch } from 'react-icons/fi';
+import { headerClassName } from '../chart/data';
+import { usePathname } from 'next/navigation';
+
+
 export default function Topbar() {
+
+  const pathname = usePathname();
+
+  const pageTitle = useMemo(() => {
+    const lastSegment = pathname.split("/").pop() || "Overview";
+    return lastSegment.charAt(0).toUpperCase() + lastSegment.slice(1);
+  }, [pathname]);
+
+
+
+  
+
   return (
  <div className="w-full flex items-center justify-between bg-white px-6 py-4 shadow-sm">
       {/* Left: Page Title */}
-      <h1 className="text-2xl font-semibold text-[#343C6A]">Overview</h1>
+      <h1 className={`text-2xl ${headerClassName}`}>{pageTitle}</h1>
+
 
       {/* Right: Search, Icons, Avatar */}
       <div className="flex items-center gap-4">

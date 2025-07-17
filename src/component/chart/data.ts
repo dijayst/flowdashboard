@@ -43,3 +43,26 @@ export const useTransactionStore = create<TransactionStore>((set) => ({
       transactions: [tx, ...state.transactions],
     })),
 }));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const headerClassName = " font-semibold text-[#343C6A]";
