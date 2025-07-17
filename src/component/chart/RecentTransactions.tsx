@@ -10,7 +10,7 @@ import { useTransactionStore } from "./data";
 const RecentTransactions: FC = () => {
    const transactions = useTransactionStore((state) => state.transactions);
   return (
-    <div className="bg-white rounded-xl shadow-sm p-5">
+    <div className="bg-white rounded-xl shadow-sm p-5 ">
    
       <ul className="space-y-4">
         {transactions.map((tx, idx) => (

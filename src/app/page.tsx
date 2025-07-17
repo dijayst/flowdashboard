@@ -19,10 +19,8 @@ export default function Home() {
   
 
 <div className="flex flex-col gap-5 lg:flex-row">
-  {/* Cards Section with Horizontal Scroll on Mobile */}
   <div className="flex flex-col gap-3 w-full lg:w-2/3">
-    {/* My Cards & See All Titles in a row */}
-    <div className="flex justify-between items-center px-1">
+   <div className="flex justify-between items-center px-1">
       <h1 className={`text-lg ${headerClassName}`}>My Cards</h1>
       <h1 className="text-lg">See All</h1>
     </div>

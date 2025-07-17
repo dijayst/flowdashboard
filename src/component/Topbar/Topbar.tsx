@@ -7,7 +7,7 @@ import { headerClassName} from '../chart/data';
 import { usePathname } from 'next/navigation';
 import { IoClose } from 'react-icons/io5';
 import Link from 'next/link';
-import { navItems } from '../Navbar/Sidedate';
+import { navItems } from '../Navbar/Sidedata';
 
 
 export default function Topbar() {

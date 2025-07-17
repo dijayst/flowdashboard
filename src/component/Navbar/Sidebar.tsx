@@ -5,7 +5,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { navItems } from "./Sidedate";
+import { navItems } from "./Sidedata";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     
  
-  <aside className="w-64 h-screen bg-white shadow px-10 flex flex-col gap-10">
+  <aside className="w-64 h-screen bg-white shadow px-10 flex flex-col gap-10 ">
       
       <div className="flex items-center space-x-2 text-[#163546] pt-10">
             <Link href="/" className="flex items-center space-x-2">
