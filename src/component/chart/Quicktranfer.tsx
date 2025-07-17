@@ -6,9 +6,9 @@ import Image from 'next/image';
 import { IoIosArrowForward } from 'react-icons/io';
 
 const users = [
-  { name: 'Livia Bator', role: 'CEO', image: '/image/topnavimg.png' },
-  { name: 'Randy Press', role: 'Director', image: '/image/topnavimg.png' },
-  { name: 'Workman', role: 'Designer', image: '/image/topnavimg.png' },
+  { name: 'Livia Bator', role: 'CEO', image: '/image/first.png' },
+  { name: 'Randy Press', role: 'Director', image: '/image/secoimg.png' },
+  { name: 'Workman', role: 'Designer', image: '/image/thirdimg.png' },
 ];
 
 export default function QuickTransfer() {
