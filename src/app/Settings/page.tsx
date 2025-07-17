@@ -1,6 +1,6 @@
 "use client";
 
-import Topbar from "@/component/Topbar/Topbar";
+import Topbar from "@/Component/Topbar/Topbar";
 import React, { useState } from "react";
 import Image from "next/image";
 import { UserProfile, useUserStore } from "./useUserProfileStore";

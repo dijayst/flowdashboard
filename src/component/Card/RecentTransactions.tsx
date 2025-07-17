@@ -4,7 +4,7 @@ import { FC } from "react";
 
 import { FaRegCreditCard } from "react-icons/fa";
 import { SlPaypal } from "react-icons/sl";
-import { useTransactionStore } from "./data";
+import { useTransactionStore } from "../lib/data";
 
 
 const RecentTransactions: FC = () => {

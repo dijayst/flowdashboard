@@ -3,11 +3,12 @@ import React, { useMemo, useState } from 'react'
 import Image from "next/image";
 import { Bell, Menu, Settings } from 'lucide-react';
 import { FiSearch } from 'react-icons/fi';
-import { headerClassName} from '../chart/data';
+
 import { usePathname } from 'next/navigation';
 import { IoClose } from 'react-icons/io5';
 import Link from 'next/link';
 import { navItems } from '../Navbar/Sidedata';
+import { headerClassName } from '../lib/data';
 
 
 export default function Topbar() {

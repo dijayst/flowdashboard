@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-import { useCardStore } from "./useCardsStore";
+import { useCardStore } from "../lib/useCardsStore";
 
 const MyCards = () => {
   const cards = useCardStore((state) => state.cards);
