@@ -14,10 +14,9 @@ const Sidebar = () => {
 
   return (
     
- 
-  <aside className="w-64 h-screen bg-white shadow px-10 flex flex-col gap-10 ">
+  <aside className="w-64 h-[150vh]  bg-white shadow px-10 flex flex-col gap-10 ">
       
-      <div className="flex items-center space-x-2 text-[#163546] pt-10">
+      <div className="flex items-center space-x-2 text-[#163546] pt-8">
             <Link href="/" className="flex items-center space-x-2">
               <Image
                 src="/image/Group.png"
@@ -26,7 +25,7 @@ const Sidebar = () => {
                 width={18}
                 height={100}
               />
-              <p className="font-bold font-inter text-2xl text-[#343C6A]">
+              <p className="font-bold font-inter text-3xl text-[#343C6A]">
                 Flow
               </p>
             </Link>
@@ -38,8 +37,8 @@ const Sidebar = () => {
 
           <Link key={i} href={item.href} 
        
-          className={`flex items-center gap-5 ${
-                isActive ? 'text-[#232323] font-semibold' : 'text-[#B1B1B1] hover:text-[#232323]'
+          className={`flex items-center gap-5 text-xl  font-semibold ${
+                isActive ? 'text-[#232323] font-semibold text-xl' : 'text-[#B1B1B1] hover:text-[#232323] text-xl font-semibold'
               }`}
           >
             {item.icon} {item.label}

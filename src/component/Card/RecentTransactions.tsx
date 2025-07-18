@@ -1,19 +1,26 @@
-// components/RecentTransactions.tsx
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import { FC } from "react";
 
+import { FC, useState } from "react";
 import { FaRegCreditCard } from "react-icons/fa";
 import { SlPaypal } from "react-icons/sl";
 import { useTransactionStore } from "../lib/data";
+import { useNavbarStore } from "../Navbar/useNavbarStore";
 
 
 const RecentTransactions: FC = () => {
    const transactions = useTransactionStore((state) => state.transactions);
+    const search = useNavbarStore((state) => state.search.toLowerCase());
+
+  const filteredTransactions = transactions.filter((tx) =>
+    tx.title.toLowerCase().includes(search) || tx.date.toLowerCase().includes(search)
+  );
+
+
+
   return (
-    <div className="bg-white rounded-xl shadow-sm p-5 ">
+    <div className="bg-white rounded-xl shadow-sm p-5  ">
    
       <ul className="space-y-4">
-        {transactions.map((tx, idx) => (
+        {filteredTransactions.map((tx, idx) => (
           <li key={idx} className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div

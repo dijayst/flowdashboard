@@ -1,4 +1,4 @@
-// stores/useTransactionStore.ts
+
 import { create } from "zustand";
 
 export type Transaction = {

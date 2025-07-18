@@ -38,7 +38,7 @@ export default function Home() {
     </div>
   </div>
 
-  <div className="flex flex-col gap-5 w-full lg:w-1/3">
+  <div className="flex flex-col gap-4 w-full lg:w-1/3">
     <h1 className={`text-lg ${headerClassName}`}>Recent Transaction</h1>
     <div className="bg-white rounded-lg">
       <RecentTransactions />

@@ -1,4 +1,4 @@
-// stores/useProfileStore.ts
+
 import { create } from "zustand";
 
 interface ProfileState {
@@ -27,4 +27,33 @@ export const useProfileStore = create<ProfileState>((set) => ({
   postalCode: "45962",
   country: "USA",
   updateProfile: (data) => set((state) => ({ ...state, ...data })),
+}));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+type NavbarState = {
+  search: string;
+  setSearch: (value: string) => void;
+
+  
+};
+
+export const useNavbarStore = create<NavbarState>((set) => ({
+  search: '',
+  setSearch: (value) => set({ search: value }),
+
+ 
 }));

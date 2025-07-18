@@ -4,6 +4,7 @@
 import { Send } from 'lucide-react';
 import Image from 'next/image';
 import { IoIosArrowForward } from 'react-icons/io';
+import { useNavbarStore } from '../Navbar/useNavbarStore';
 
 const users = [
   { name: 'Livia Bator', role: 'CEO', image: '/image/first.png' },
@@ -12,11 +13,18 @@ const users = [
 ];
 
 export default function QuickTransfer() {
+
+  
+      const search = useNavbarStore((state) => state.search.toLowerCase());
+  
+    const filteredusers = users.filter((tx) =>
+      tx.name.toLowerCase().includes(search) || tx.role.toLowerCase().includes(search)
+    );
   return (
    <div className="bg-white p-4 rounded shadow h-[235]">
 <div className='flex justify-between'>
       <div className="flex items-center space-x-4 overflow-x-auto pb-4 gap-10">
-        {users.map((user, i) => (
+        {filteredusers.map((user, i) => (
           
           <div key={i} className="flex-shrink-0 text-center ">
             <Image
