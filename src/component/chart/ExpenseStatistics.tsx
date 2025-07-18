@@ -15,30 +15,7 @@ const ExpenseStatistics = () => {
 
   
 const baseUrl = process.env.NEXT_PUBLIC_BASE;
-  useEffect(() => {
-    if (!baseUrl) {
-    console.error("Missing NEXT_PUBLIC_BASE environment variable");
-    return;
-  }
-    const fetchStats = async () => {
-      setLoading(true);
-      
-      try {
-        const response = await axios.get(
-          `${baseUrl}/statistic`
-        );
-        setData(response.data);
-      } catch (error) {
-        console.error("Fetch error:", error);
-        toast.error("Failed to fetch statistics.");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchStats();
-  }, [baseUrl]);
-
+ 
 
   return (
     <div className="bg-white p-4 rounded-lg shadow w-full h-[300px]">

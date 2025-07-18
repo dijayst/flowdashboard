@@ -19,28 +19,6 @@ const [loading, setLoading] = useState(false);
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  useEffect(() => {
-    if (!baseUrl) {
-    console.error("Missing NEXT_PUBLIC_BASE environment variable");
-    return;
-  }
-    const fetchData = async () => {
-      setLoading(true); 
-      try {
-        
-        const response = await axios.get(`${baseUrl}/history`);
-        setData(response.data);
-      } catch (error) {
-        console.error("Fetch error:", error);
-        toast.error("Something went wrong while fetching data."); 
-      } finally {
-        setLoading(false); 
-      }
-    };
-
-    fetchData();
-  }, [baseUrl]);
-
   return (
     <div className="bg-white p-4 rounded shadow">
     {loading ? (

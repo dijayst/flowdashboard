@@ -17,27 +17,7 @@ export default function WeeklyActivityChart() {
 
   
         const baseUrl = process.env.NEXT_PUBLIC_BASE;
-  useEffect(() => {
-    if (!baseUrl) {
-    console.error("Missing NEXT_PUBLIC_BASE environment variable");
-    return;
-  }
-    const fetchData = async () => {
-      
-      try {
-        const response = await axios.get(`${baseUrl}/weekly_activity`);
-        setData(response.data);
-      } catch (error) {
-        toast.error("Failed to fetch weekly activity data.");
-        console.error("Axios fetch error:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [baseUrl]);
-
+ 
   return (
      <div className="bg-white p-6 rounded-lg shadow-md w-full">
      {loading ? (
