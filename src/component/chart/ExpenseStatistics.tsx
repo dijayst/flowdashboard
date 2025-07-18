@@ -36,9 +36,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE;
   }, []);
   return (
     <div className="bg-white p-4 rounded-lg shadow w-full h-[300px]">
-     {loading ? (
-        <p>Loading Expense statistics...</p>
-      ) : (
+   
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
@@ -58,7 +56,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE;
           <Tooltip />
           <Legend />
         </PieChart>
-      </ResponsiveContainer>)}
+      </ResponsiveContainer>
     </div>
   );
 };
