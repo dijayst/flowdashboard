@@ -1,13 +1,14 @@
 "use client";
 
-import CardSummary from "@/Component/CreditCard/CardSummary";
-import BalanceHistoryChart from "@/Component/Chart/BalanceHistory";
-import { headerClassName } from "@/Component/lib/data";
-import ExpenseStatistics from "@/Component/Chart/ExpenseStatistics";
 import QuickTransfer from "@/Component/Card/Quicktranfer";
 import RecentTransactions from "@/Component/Card/RecentTransactions";
+import BalanceHistoryChart from "@/Component/Chart/BalanceHistory";
+import ExpenseStatistics from "@/Component/Chart/ExpenseStatistics";
 import WeeklyActivityChart from "@/Component/Chart/WeeklyActivityChart";
+import CardSummary from "@/Component/CreditCard/CardSummary";
+import { headerClassName } from "@/Component/lib/data";
 import Topbar from "@/Component/Topbar/Topbar";
+
 
 export default function Home() {
   return (

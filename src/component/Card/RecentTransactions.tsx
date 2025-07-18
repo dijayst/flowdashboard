@@ -5,7 +5,6 @@ import { SlPaypal } from "react-icons/sl";
 import { useTransactionStore } from "../lib/data";
 import { useNavbarStore } from "../Navbar/useNavbarStore";
 
-
 const RecentTransactions: FC = () => {
    const transactions = useTransactionStore((state) => state.transactions);
     const search = useNavbarStore((state) => state.search.toLowerCase());
