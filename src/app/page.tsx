@@ -20,7 +20,7 @@ export default function Home() {
 <div className="flex flex-col gap-5 lg:flex-row">
   <div className="flex flex-col gap-3 w-full lg:w-2/3">
    <div className="flex justify-between items-center px-1">
-      <h1 className={`text-lg ${headerClassName}`}>My Cards</h1>
+      <h1 className={`text-xl ${headerClassName}`}>My Cards</h1>
       <h1 className="text-lg">See All</h1>
     </div>
 
@@ -39,7 +39,7 @@ export default function Home() {
   </div>
 
   <div className="flex flex-col gap-4 w-full lg:w-1/3">
-    <h1 className={`text-lg ${headerClassName}`}>Recent Transaction</h1>
+    <h1 className={`text-xl ${headerClassName}`}>Recent Transaction</h1>
     <div className="bg-white rounded-lg">
       <RecentTransactions />
     </div>
@@ -50,22 +50,22 @@ export default function Home() {
 
   <div className="flex flex-col lg:flex-row gap-5">
     <div className="w-full lg:w-2/3">
-      <h1 className={`mb-4 text-lg ${headerClassName}`}>Weekly Activity</h1>
+      <h1 className={`mb-4 text-xl ${headerClassName}`}>Weekly Activity</h1>
       <WeeklyActivityChart />
     </div>
     <div className="w-full lg:w-1/3">
-      <h1 className={`mb-4 text-lg ${headerClassName}`}>Expense Statistics</h1>
+      <h1 className={`mb-4 text-xl ${headerClassName}`}>Expense Statistics</h1>
       <ExpenseStatistics />
     </div>
   </div>
 
   <div className="flex flex-col lg:flex-row gap-5">
     <div className="w-full lg:w-2/5">
-      <h1 className={`text-lg mb-4 ${headerClassName}`}>Quick Transfer</h1>
+      <h1 className={`text-xl mb-4 ${headerClassName}`}>Quick Transfer</h1>
       <QuickTransfer />
     </div>
     <div className="w-full lg:w-3/5">
-      <h1 className={`text-lg mb-4 ${headerClassName}`}>Balance History</h1>
+      <h1 className={`text-xl mb-4 ${headerClassName}`}>Balance History</h1>
       <BalanceHistoryChart />
     </div>
   </div>

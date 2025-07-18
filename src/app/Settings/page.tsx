@@ -23,7 +23,7 @@ export default function page() {
         <button
           key={tab}
           onClick={() => setActiveTab(tab)}
-          className={`pb-2 text-sm font-semibold ${
+          className={`pb-2 text-base font-semibold ${
             activeTab === tab
               ? "border-b-2 border-[#343C6A] text-[#232323] "
               : "text-[#718EBF]"

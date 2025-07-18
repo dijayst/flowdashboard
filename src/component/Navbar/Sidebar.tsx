@@ -25,7 +25,7 @@ const Sidebar = () => {
                 width={18}
                 height={100}
               />
-              <p className="font-bold font-inter text-3xl text-[#343C6A]">
+              <p className="font-extrabold font-inter text-3xl text-[#343C6A]">
                 Flow
               </p>
             </Link>
@@ -37,8 +37,8 @@ const Sidebar = () => {
 
           <Link key={i} href={item.href} 
        
-          className={`flex items-center gap-5 text-xl  font-semibold ${
-                isActive ? 'text-[#232323] font-semibold text-xl' : 'text-[#B1B1B1] hover:text-[#232323] text-xl font-semibold'
+          className={`flex items-center gap-5 text-lg  font-medium ${
+                isActive ? 'text-[#232323] font-medium text-lg' : 'text-[#B1B1B1] hover:text-[#232323] text-lg font-medium'
               }`}
           >
             {item.icon} {item.label}

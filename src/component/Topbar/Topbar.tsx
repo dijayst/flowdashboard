@@ -58,7 +58,7 @@ export default function Topbar() {
         </div>
 
         {/* Title for desktop */}
-        <h1 className={`text-3xl hidden sm:block ${headerClassName}`}>
+        <h1 className={`text-2xl hidden sm:block ${headerClassName}`}>
           {pageTitle}
         </h1>
 

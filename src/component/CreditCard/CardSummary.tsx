@@ -40,11 +40,12 @@ const MyCards = () => {
                 <p className="font-semibold text-sm">{card.valid}</p>
               </div>
             </div>
-            <div className="flex justify-between">
+           
+            <div className="flex justify-between items-center ">
               <p className="mt-4 tracking-widest text-sm">{card.number}</p>
               
 
-              <div className="relative w-5 h-5 ml-5">
+              <div className="relative w-5 h-5 ml-5 items-center">
   <div className="absolute top-0 left-0 w-5 h-5 bg-gray-500 border-gray-500 border-2  rounded-full z-10"></div>
   <div className="absolute top-0 left-3 w-5 h-5 bg-gray-500 border-gray-500 border-2 rounded-full z-10"></div>
 </div>
