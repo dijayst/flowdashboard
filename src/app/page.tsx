@@ -21,7 +21,7 @@ export default function Home() {
   <div className="flex flex-col gap-3 w-full lg:w-2/3">
    <div className="flex justify-between items-center px-1">
       <h1 className={`text-xl ${headerClassName}`}>My Cards</h1>
-      <h1 className="text-lg">See All</h1>
+      <h1 className="text-base font-semibold text-[#343C6A]">See All</h1>
     </div>
 
   
