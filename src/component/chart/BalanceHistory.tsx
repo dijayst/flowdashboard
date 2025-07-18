@@ -16,7 +16,7 @@ export default function BalanceHistoryChart() {
  
 const [loading, setLoading] = useState(false); 
 
-
+/*
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   useEffect(() => {
@@ -35,11 +35,27 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     };
 
     fetchData();
-  }, []);
+  }, []);*/
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://6877c66edba809d901f0de01.mockapi.io/history');
+      const result = await response.json();
+      setData(result);
+    } catch (error) {
+      console.error("Fetch failed:", error);
+    }
+  };
+
+  fetchData();
+}, []);
+
 
   return (
     <div className="bg-white p-4 rounded shadow">
-   
+    {loading ? (
+        <p>Loading  WeeklyActivity ...</p>
+      ) : (
       <ResponsiveContainer width="100%" height={200}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
@@ -48,7 +64,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
           <Tooltip />
           <Line type="monotone" dataKey="balance" stroke="#3b82f6" strokeWidth={2} />
         </LineChart>
-      </ResponsiveContainer>
+      </ResponsiveContainer>)}
     </div>
   );
 }
