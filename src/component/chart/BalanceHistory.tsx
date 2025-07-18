@@ -19,13 +19,29 @@ const [loading, setLoading] = useState(false);
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true); 
+      try {
+        
+        const response = await axios.get(`${baseUrl}/history`);
+        setData(response.data);
+      } catch (error) {
+        console.error("Fetch error:", error);
+        toast.error("Something went wrong while fetching data."); 
+      } finally {
+        setLoading(false); 
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="bg-white p-4 rounded shadow">
     {loading ? (
         <p>Loading  WeeklyActivity ...</p>
-      ) : data.length === 0 ? (
-  <p>No data available</p>
-) : (
+      ) : (
       <ResponsiveContainer width="100%" height={200}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
