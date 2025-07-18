@@ -19,8 +19,11 @@ const [loading, setLoading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true); 
+      
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
       try {
-        const response = await axios.get("https://6877c66edba809d901f0de01.mockapi.io/history");
+        const response = await axios.get(`${baseUrl}/history`);
         setData(response.data);
       } catch (error) {
         console.error("Fetch error:", error);

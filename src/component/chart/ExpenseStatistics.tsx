@@ -16,9 +16,11 @@ const ExpenseStatistics = () => {
   useEffect(() => {
     const fetchStats = async () => {
       setLoading(true);
+      
+const baseUrl = process.env.NEXT_PUBLIC_BASE;
       try {
         const response = await axios.get(
-          "https://6877b1cadba809d901f08847.mockapi.io/statistic"
+          `${baseUrl}/statistic`
         );
         setData(response.data);
       } catch (error) {
