@@ -16,6 +16,10 @@ const ExpenseStatistics = () => {
   
 const baseUrl = process.env.NEXT_PUBLIC_BASE;
   useEffect(() => {
+    if (!baseUrl) {
+    console.error("Missing NEXT_PUBLIC_BASE environment variable");
+    return;
+  }
     const fetchStats = async () => {
       setLoading(true);
       
@@ -33,14 +37,16 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE;
     };
 
     fetchStats();
-  }, []);
+  }, [baseUrl]);
 
 
   return (
     <div className="bg-white p-4 rounded-lg shadow w-full h-[300px]">
      {loading ? (
         <p>Loading Expense statistics...</p>
-      ) : (
+      ) : data.length === 0 ? (
+  <p>No data available</p>
+) : (
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie

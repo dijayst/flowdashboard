@@ -18,6 +18,10 @@ export default function WeeklyActivityChart() {
   
         const baseUrl = process.env.NEXT_PUBLIC_BASE;
   useEffect(() => {
+    if (!baseUrl) {
+    console.error("Missing NEXT_PUBLIC_BASE environment variable");
+    return;
+  }
     const fetchData = async () => {
       
       try {
@@ -32,13 +36,15 @@ export default function WeeklyActivityChart() {
     };
 
     fetchData();
-  }, []);
+  }, [baseUrl]);
 
   return (
      <div className="bg-white p-6 rounded-lg shadow-md w-full">
      {loading ? (
         <p>Loading  WeeklyActivity ...</p>
-      ) : (
+      ) : data.length === 0 ? (
+  <p>No data available</p>
+) : (
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />

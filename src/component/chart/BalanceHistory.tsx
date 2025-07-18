@@ -20,6 +20,10 @@ const [loading, setLoading] = useState(false);
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   useEffect(() => {
+    if (!baseUrl) {
+    console.error("Missing NEXT_PUBLIC_BASE environment variable");
+    return;
+  }
     const fetchData = async () => {
       setLoading(true); 
       try {
@@ -35,13 +39,15 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     };
 
     fetchData();
-  }, []);
+  }, [baseUrl]);
 
   return (
     <div className="bg-white p-4 rounded shadow">
     {loading ? (
         <p>Loading  WeeklyActivity ...</p>
-      ) : (
+      ) : data.length === 0 ? (
+  <p>No data available</p>
+) : (
       <ResponsiveContainer width="100%" height={200}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
