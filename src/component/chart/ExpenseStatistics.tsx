@@ -13,7 +13,7 @@ const ExpenseStatistics = () => {
   
   const [loading, setLoading] = useState(false);
 
-  
+  /*
 const baseUrl = process.env.NEXT_PUBLIC_BASE;
   useEffect(() => {
     const fetchStats = async () => {
@@ -34,7 +34,14 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE;
 
     fetchStats();
   }, []);
+*/
 
+
+  useEffect(() => {
+    fetch("https://6877b1cadba809d901f08847.mockapi.io/statistic")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
 
   return (
     <div className="bg-white p-4 rounded-lg shadow w-full h-[300px]">
