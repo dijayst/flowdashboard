@@ -2,9 +2,9 @@
 
 //import QuickTransfer from "../component/Card/Quicktranfer";
 import RecentTransactions from "../component/Card/RecentTransactions";
-import BalanceHistoryChart from "../component/Chart/BalanceHistory";
-import ExpenseStatistics from "../component/Chart/ExpenseStatistics";
-import WeeklyActivityChart from "../component/Chart/WeeklyActivityChart";
+import BalanceHistoryChart from "../component/chart/BalanceHistory";
+import ExpenseStatistics from "../component/chart/ExpenseStatistics";
+import WeeklyActivityChart from "../component/chart/WeeklyActivityChart";
 import CardSummary from "../component/CreditCard/CardSummary";
 import { headerClassName } from "../lib/data";
 import Topbar from "../component/Topbar/Topbar";
