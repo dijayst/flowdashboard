@@ -2,9 +2,9 @@
 
 //import QuickTransfer from "../component/Card/Quicktranfer";
 import RecentTransactions from "../component/Card/RecentTransactions";
-import BalanceHistoryChart from "../component/Chart/BalanceHistory";
-import ExpenseStatistics from "../component/Chart/ExpenseStatistics";
-import WeeklyActivityChart from "../component/Chart/WeeklyActivityChart";
+//import BalanceHistoryChart from "../component/Chart/BalanceHistory";
+//import ExpenseStatistics from "../component/Chart/ExpenseStatistics";
+//import WeeklyActivityChart from "../component/Chart/WeeklyActivityChart";
 import CardSummary from "../component/CreditCard/CardSummary";
 import { headerClassName } from "../component/lib/data";
 import Topbar from "../component/Topbar/Topbar";
@@ -51,25 +51,11 @@ export default function Home() {
 
 
   <div className="flex flex-col lg:flex-row gap-5">
-    <div className="w-full lg:w-2/3">
-      <h1 className={`mb-4 text-xl ${headerClassName}`}>Weekly Activity</h1>
-      <WeeklyActivityChart />
-    </div>
-    <div className="w-full lg:w-1/3">
-      <h1 className={`mb-4 text-xl ${headerClassName}`}>Expense Statistics</h1>
-      <ExpenseStatistics />
-    </div>
-  </div>
-
-  <div className="flex flex-col lg:flex-row gap-5">
     <div className="w-full lg:w-2/5">
       <h1 className={`text-xl mb-4 ${headerClassName}`}>Quick Transfer</h1>
       <QuickTransfer />
     </div>
-    <div className="w-full lg:w-3/5">
-      <h1 className={`text-xl mb-4 ${headerClassName}`}>Balance History</h1>
-      <BalanceHistoryChart />
-    </div>
+   
   </div>
 </div>
 
