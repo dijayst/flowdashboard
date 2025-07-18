@@ -15,13 +15,13 @@ export default function WeeklyActivityChart() {
 
   const [loading, setLoading] = useState(true); 
 
-  /*
+  
         const baseUrl = process.env.NEXT_PUBLIC_BASE;
   useEffect(() => {
     const fetchData = async () => {
       
       try {
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_BASE}/weekly_activity`);
+        const response = await axios.get(`https://6877b1cadba809d901f08847.mockapi.io/weekly_activity`);
         setData(response.data);
       } catch (error) {
         toast.error("Failed to fetch weekly activity data.");
@@ -33,17 +33,7 @@ export default function WeeklyActivityChart() {
 
     fetchData();
   }, []);
-*/
 
-
-
-  useEffect(() => {
-    fetch("https://6877b1cadba809d901f08847.mockapi.io/weekly_activity")
-      .then(res => res.json())
-      .then(setData)
-      .catch(err => console.error("Failed to fetch data:", err));
-  }, []);
-  
   return (
      <div className="bg-white p-6 rounded-lg shadow-md w-full">
      {loading ? (

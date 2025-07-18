@@ -16,17 +16,27 @@ export default function BalanceHistoryChart() {
  
 const [loading, setLoading] = useState(false); 
 
- useEffect(() => {
-    // Mock API call
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://6877c66edba809d901f0de01.mockapi.io/history');
-      const result = await response.json();
-      setData(result);
+      setLoading(true); 
+      try {
+        
+        const response = await axios.get(`https://6877c66edba809d901f0de01.mockapi.io/history`);
+        setData(response.data);
+      } catch (error) {
+        console.error("Fetch error:", error);
+        toast.error("Something went wrong while fetching data."); 
+      } finally {
+        setLoading(false); 
+      }
     };
 
     fetchData();
   }, []);
-  
+
   return (
     <div className="bg-white p-4 rounded shadow">
     {loading ? (
