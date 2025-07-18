@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Topbar from "@/Component/Topbar/Topbar";
-import { SettingForm } from "@/Component/Form/Settingform";
+import Topbar from "@/component/Topbar/Topbar";
+import { SettingForm } from "@/component/Form/Settingform";
 export default function page() {
 
   const [activeTab, setActiveTab] = useState("Edit Profile");
