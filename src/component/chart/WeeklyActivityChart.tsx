@@ -36,9 +36,7 @@ export default function WeeklyActivityChart() {
 
   return (
      <div className="bg-white p-6 rounded-lg shadow-md w-full">
-     {loading ? (
-        <p>Loading  WeeklyActivity ...</p>
-      ) : (
+     
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
@@ -48,7 +46,7 @@ export default function WeeklyActivityChart() {
           <Bar dataKey="deposit" fill="#343C6A" />
           <Bar dataKey="withdraw" fill="#4F75FF" />
         </BarChart>
-      </ResponsiveContainer>)}
+      </ResponsiveContainer>
     </div>
   )
 }
