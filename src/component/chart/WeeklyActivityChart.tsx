@@ -21,7 +21,7 @@ export default function WeeklyActivityChart() {
     const fetchData = async () => {
       
       try {
-        const response = await axios.get(`${baseUrl}/weekly_activity`);
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_BASE}/weekly_activity`);
         setData(response.data);
       } catch (error) {
         toast.error("Failed to fetch weekly activity data.");

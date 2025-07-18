@@ -6,7 +6,7 @@ import BalanceHistoryChart from "../component/Chart/BalanceHistory";
 import ExpenseStatistics from "../component/Chart/ExpenseStatistics";
 import WeeklyActivityChart from "../component/Chart/WeeklyActivityChart";
 import CardSummary from "../component/CreditCard/CardSummary";
-import { headerClassName } from "../component/lib/data";
+import { headerClassName } from "../lib/data";
 import Topbar from "../component/Topbar/Topbar";
 import QuickTransfer from "../component/Card/Quicktranfer"
 

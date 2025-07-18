@@ -10,7 +10,7 @@ import Link from "next/link";
 
 
 
-import { headerClassName } from "../lib/data";
+import { headerClassName } from "../../lib/data";
 import { navItems } from "../Navbar/Sidedata";
 import { useNavbarStore } from "../Navbar/useNavbarStore";
 

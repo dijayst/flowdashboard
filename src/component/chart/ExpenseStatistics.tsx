@@ -21,7 +21,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE;
       
       try {
         const response = await axios.get(
-          `${baseUrl}/statistic`
+          `${process.env.NEXT_PUBLIC_BASE}/statistic`
         );
         setData(response.data);
       } catch (error) {
