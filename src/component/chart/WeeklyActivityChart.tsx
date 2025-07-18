@@ -18,10 +18,10 @@ export default function WeeklyActivityChart() {
   useEffect(() => {
     const fetchData = async () => {
       
-const baseUrl = process.env.NEXT_PUBLIC_BASE;
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
       try {
-        const response = await axios.get(`${baseUrl}/weekly_activity`);
+        const response = await axios.get("https://6877b1cadba809d901f08847.mockapi.io/weekly_activity");
         setData(response.data);
       } catch (error) {
         toast.error("Failed to fetch weekly activity data.");

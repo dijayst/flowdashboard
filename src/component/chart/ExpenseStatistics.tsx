@@ -20,7 +20,7 @@ const ExpenseStatistics = () => {
 const baseUrl = process.env.NEXT_PUBLIC_BASE;
       try {
         const response = await axios.get(
-          `${baseUrl}/statistic`
+          "https://6877b1cadba809d901f08847.mockapi.io/statistic"
         );
         setData(response.data);
       } catch (error) {
